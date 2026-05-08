@@ -28,25 +28,6 @@ app.get("/",logger, (req: Request, res: Response) => {
 // user create
 app.use("/users",userRoutes);
 
-
-// Get All Users
-// app.get("/users", async (req: Request, res: Response) => {
-//   try {
-//     const result = await pool.query(`SELECT * FROM users`);
-
-//     res.status(200).json({
-//       success: true,
-//       message: "Users retrieved successfully",
-//       data: result.rows,
-//     });
-//   } catch (err: any) {
-//     res.status(500).json({
-//       success: false,
-//       message: err.message,
-//     });
-//   }
-// });
-
 // Get User By ID
 app.get("/users/:id", async (req: Request, res: Response) => {
   try {
