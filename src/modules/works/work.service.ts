@@ -25,8 +25,21 @@ const getSingleWork =async(id:string)=>{
      return result;
 }
 
+const updateWork = async(title:string, description:string, completed:boolean, due_date:string, hobby:string, id:string)=>{
+    
+    const result = await pool.query(
+      `UPDATE works 
+       SET title=$1, description=$2, completed=$3, due_date=$4, hobby=$5
+       WHERE id=$6
+       RETURNING *`,
+      [title, description, completed, due_date, hobby, id]
+    );
+    return result;
+}
+
 export const workServices = {
     workCreate,
     getWork,
-    getSingleWork
+    getSingleWork,
+    updateWork
 }

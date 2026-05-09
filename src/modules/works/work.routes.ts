@@ -8,4 +8,6 @@ router.get("/", workControllers.getWork );
 
 router.get("/:id", workControllers.getSingleWork );
 
+router.put("/:id", workControllers.updateWork );
+
 export const workRoutes = router;

@@ -13,7 +13,6 @@ const port = config.port;
 app.use(express.json());
 
 
-
 initDB().catch((err) => {
   console.error("DB init failed:", err);
   process.exit(1);
@@ -33,44 +32,8 @@ app.use("/users",userRoutes);
 app.use("/works", workRoutes);
 
 
-
-
-
-// Get works By ID
-app.get("/works/:id", );
-
 // Update Todo
-app.put("/works/:id", async (req: Request, res: Response) => {
-  const { title, description, completed, due_date, hobby } = req.body;
 
-  try {
-    const result = await pool.query(
-      `UPDATE works 
-       SET title=$1, description=$2, completed=$3, due_date=$4, hobby=$5
-       WHERE id=$6
-       RETURNING *`,
-      [title, description, completed, due_date, hobby, req.params.id]
-    );
-
-    if (result.rows.length === 0) {
-      return res.status(404).json({
-        success: false,
-        message: "works not found",
-      });
-    }
-
-    res.status(200).json({
-      success: true,
-      message: "works updated successfully",
-      data: result.rows[0],
-    });
-  } catch (err: any) {
-    res.status(500).json({
-      success: false,
-      message: err.message,
-    });
-  }
-});
 
 // Delete Todo
 app.delete("/works/:id", async (req: Request, res: Response) => {
