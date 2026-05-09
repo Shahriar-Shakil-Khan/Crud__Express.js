@@ -5,7 +5,7 @@ import initDB, { pool } from "./config/db";
 import logger from "./middleware/logger";
 import { userRoutes } from "./modules/user/user.routes";
 import { workRoutes } from "./modules/works/work.routes";
-import { authRoutes } from "./modules/auth/auth.service";
+import { authRoutes } from "./modules/auth/auth.routes";
 
 const app = express();
 const port = config.port;

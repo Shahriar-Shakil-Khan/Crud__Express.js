@@ -16,4 +16,4 @@ npm i pg
 
 npm i dotenv
 
-for password go to  Bcrypt ( npm i bcryptjs )
+for password go to  Bcrypt ( npm i bcryptjs ) and go to jwt token ( npm i jsonwebtoken,npm i --save-dev @types/jsonwebtoken )
