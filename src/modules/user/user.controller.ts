@@ -3,10 +3,9 @@ import { pool } from "../../config/db";
 import { userServices } from "./user.service";
 
 const createUser = async (req: Request, res: Response) => {
-  const { name, email, age, phone, address, hobby } = req.body;
 
   try {
-    const result = await userServices.createUser(name, email, age, phone, address, hobby)
+    const result = await userServices.createUser(req.body)
 
     res.status(201).json({
       success: true,

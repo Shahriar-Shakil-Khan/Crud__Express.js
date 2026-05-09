@@ -15,3 +15,5 @@ npm run dev
 npm i pg
 
 npm i dotenv
+
+for password go to  Bcrypt ( npm i bcryptjs )

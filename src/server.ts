@@ -5,6 +5,7 @@ import initDB, { pool } from "./config/db";
 import logger from "./middleware/logger";
 import { userRoutes } from "./modules/user/user.routes";
 import { workRoutes } from "./modules/works/work.routes";
+import { authRoutes } from "./modules/auth/auth.service";
 
 const app = express();
 const port = config.port;
@@ -30,6 +31,10 @@ app.use("/users",userRoutes);
 // ================= works CRUD =================
 
 app.use("/works", workRoutes);
+
+//================== Auth Routes =================
+
+app.use("/auth", authRoutes);
 
 
 
