@@ -1,3 +1,4 @@
+
 npm init -y
 
 npm install express --save
@@ -17,3 +18,6 @@ npm i pg
 npm i dotenv
 
 for password go to  Bcrypt ( npm i bcryptjs ) and go to jwt token ( npm i jsonwebtoken,npm i --save-dev @types/jsonwebtoken )
+
+(Modular Pattern)--->RCS
+![alt text](image.png)
