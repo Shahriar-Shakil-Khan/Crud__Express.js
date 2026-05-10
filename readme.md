@@ -40,7 +40,9 @@ vercel login (verify account)
 
 create vercel.json
 
-deploy express typescript app to vercel ( https://medium.com/@hammadafzal1111/deploy-your-node-js-typescript-app-on-vercel-the-ultimate-guide-43cf7848cf09 )
+deploy express typescript app to vercel 
+
+https://medium.com/@hammadafzal1111/deploy-your-node-js-typescript-app-on-vercel-the-ultimate-guide-43cf7848cf09 
 
 vercel --prod  =>press y
 
